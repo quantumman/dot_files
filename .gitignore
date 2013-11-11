@@ -1,0 +1,11 @@
+# ignore all
+*
+*/
+
+# allow any
+!.zshrc
+!.zsenv
+!.gitconfig
+!.tmux.conf
+!.aspell.conf
+!.gitignore

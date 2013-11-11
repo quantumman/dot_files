@@ -1,0 +1,37 @@
+[user]
+	name = Shoadi Yokoyama
+	email = quantumcars@gmail.com
+[color]
+	ui = auto
+[core]
+	# editor = vim -c \"set fenc=utf-8\"
+	editor = /usr/local/bin/emacsclient
+
+[alias]
+	b  = "branch"
+	co = "checkout"
+	d  = "diff"
+	dc = diff --cached
+	edit = commit --amend
+	f  = "fetch"
+	fix = commit --amend -a
+	fixup = commit --amend -a -C HEAD
+	g  = "log --oneline --graph --pretty=oneline --decorate"
+	gg = "log --oneline --graph"
+	l  = "log"
+	lg = "log --graph"
+	ll = "log --oneline"
+	ro = "rebase origin/master -i"
+	s  = "status"
+	sh = "show"
+	br = branch
+	r = "!sh -c 'if [ \"$#\" -eq 0 ]; then from='origin/master'; else from=\"$1\"; fi; git log -p --reverse \"$from\"..\"$2\"' - "
+	ro = "!sh -c 'if [ \"$#\" -eq 0 ]; then from='origin/master'; else from=\"$1\"; fi; git rebase \"$from\" -i' - "
+	rc = rebase --continue
+[diff]
+	tool = ediff
+
+[difftool "ediff"]
+	cmd = ediff "$LOCAL" "$REMOTE"
+[rerere]
+	enabled = true
